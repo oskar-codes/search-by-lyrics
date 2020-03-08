@@ -47,7 +47,7 @@ body {
 }
 
 
-@media only screen and (orientation: landscape) {
+@media only screen and (orientation: portrait) {
   iframe {
     width: 100% !important;
     height: auto !important;

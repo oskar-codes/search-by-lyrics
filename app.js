@@ -2,14 +2,11 @@ var resultsContainer = document.querySelector("#results");
 var accessToken = "";
 
 window.onload = function() {
-  var search = document.querySelector("input");
-  search.setAttribute("placeholder","Enter some lyrics");
-  search.style.background = "";
-  search.style.textIndent = "";
-  
+  document.querySelector("input").setAttribute("placeholder", "Enter some lyrics");
+
   if (/#access_token\=.+/.test(location.href)) {
     document.getElementById("connect-container").style.display = "none";
-    accessToken = location.href.toString().match(/(?:\#access_token\=).+?(?=\&)/)[0].replace("#access_token=","");
+    accessToken = location.href.toString().match(/(?:\#access_token\=).+?(?=\&)/)[0].replace("#access_token=", "");
   }
   document.querySelector(".gsc-search-button .gsc-search-button-v2").onclick = function() {
     resultsContainer.innerHTML = "Loading...";

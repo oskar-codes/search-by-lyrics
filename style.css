@@ -58,4 +58,5 @@ body {
 
 input {
   background: none !important;
+  text-indent: 0 !important;
 }

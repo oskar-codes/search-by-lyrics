@@ -5,7 +5,7 @@ var accessToken = "";
 var testingValue = "this is a test";
 
 alert("test")
-/*window.onload = function() {
+window.onload = function() {
   alert("loading...");
   if (/#access_token=.+/.test(location.href)) {
     alert("logged in");
@@ -17,7 +17,7 @@ alert("test")
   document.querySelector(".gsc-search-button .gsc-search-button-v2").onclick = function() {
     resultsContainer.innerHTML = "Loading...";
     window.setTimeout(function(){
-      updateResults();
+      //updateResults();
     },3000)
   }
   
@@ -25,12 +25,12 @@ alert("test")
     if (e.key === "Enter") {
       resultsContainer.innerHTML = "Loading...";
       window.setTimeout(function(){
-        updateResults();
+        //updateResults();
       },3000)
     }
   }
 }
-
+/*
 function updateResults() {
   if (accessToken !== "") {
     resultsContainer.innerHTML = "";

@@ -11,7 +11,7 @@ window.onload = function() {
   if (/#access_token\=.+/.test(location.href)) {
     alert("logged in");
     document.getElementById("connect-container").style.display = "none";
-    accessToken = location.href.match(/(?<=access_token\=).+?(?=&)/)[0];
+    accessToken = location.href.toString().match(/(?<=#access_token\=).+?(?=\&)/)[0];
     alert(accessToken);
   }
   } catch (e) { alert(e) }

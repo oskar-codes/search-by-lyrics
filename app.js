@@ -60,3 +60,12 @@ function getTrackHTML(id) {
       allow="encrypted-media">
     </iframe>`
 }
+
+document.getElementById("gsc-i-id1").onkeyup = function(e) {
+  if (e.key === "Enter") {
+    resultsContainer.innerHTML = "Loading...";
+    window.setTimeout(function(){
+      updateResults();
+    },3000)
+  }
+}

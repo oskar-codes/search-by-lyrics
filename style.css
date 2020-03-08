@@ -50,6 +50,6 @@ body {
 @media only screen and (orientation: portrait) {
   iframe {
     width: 100% !important;
-    height: auto !important;
+    height: 300px !important;
   }
 }

@@ -1,0 +1,11 @@
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.gsc-results-wrapper-nooverlay {
+  display: none !important;
+}
+
+#results {
+  text-align: center;
+}

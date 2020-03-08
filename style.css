@@ -30,9 +30,12 @@ body {
 
 #spotify-connect {
   color: white;
-  border-radius: 10px;
+  border-radius: 500px;
   border: none;
   background-color: #1db954;
-  font-size: 32px;
-  padding: 20px;
+  font-size: 20px;
+  padding: 11px 32px 9px;
+  min-width: 160px;
+  text-transform: uppercase;
+  box-sizing: border-box;
 }

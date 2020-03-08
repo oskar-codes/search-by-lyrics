@@ -55,3 +55,7 @@ body {
     height: 400px !important;
   }
 }
+
+input {
+  background: none !important;
+}

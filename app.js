@@ -9,7 +9,7 @@ window.onload = function() {
   
   if (/#access_token=.+/.test(window.location.href)) {
     document.getElementById("connect-container").style.display = "none";
-    accessToken = window.location.href.match(/(?<=\=access_token).+?(?=&)/)[0];
+    accessToken = window.location.href.match(/(?<=access_token\=).+?(?=&)/)[0];
   }
   
   document.querySelector(".gsc-search-button .gsc-search-button-v2").onclick = function() {

@@ -3,7 +3,7 @@ var accessToken = "";
 var testingValue = "this is a test";
 
 window.onload = function() {
-  
+  alert("loading...");
   if (/#access_token=.+/.test(location.href)) {
     alert("logged in");
     document.getElementById("connect-container").style.display = "none";

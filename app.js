@@ -1,5 +1,6 @@
 var resultsContainer = document.querySelector("#results");
 var accessToken = "";
+var testingValue = "this is a test";
 
 window.onload = function() {
   

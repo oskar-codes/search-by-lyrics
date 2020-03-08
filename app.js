@@ -2,24 +2,20 @@ alert("first test");
 
 var resultsContainer = document.querySelector("#results");
 var accessToken = "";
-var testingValue = "this is a test";
 
 alert("test")
 window.onload = function() {
   alert("loading...");
-  try {
   if (/#access_token\=.+/.test(location.href)) {
     alert("logged in");
     document.getElementById("connect-container").style.display = "none";
-    accessToken = location.href.toString().match(/(?<=#access_token\=).+?(?=\&)/)[0];
+    accessToken = location.href.toString().match(/(?:\#access_token\=).+?(?=\&)/)[0].replace("#access_token=","");
     alert(accessToken);
   }
-  } catch (e) { alert(e) }
-}/*
   document.querySelector(".gsc-search-button .gsc-search-button-v2").onclick = function() {
     resultsContainer.innerHTML = "Loading...";
     window.setTimeout(function(){
-      //updateResults();
+      updateResults();
     },3000)
   }
   
@@ -27,12 +23,12 @@ window.onload = function() {
     if (e.key === "Enter") {
       resultsContainer.innerHTML = "Loading...";
       window.setTimeout(function(){
-        //updateResults();
+        updateResults();
       },3000)
     }
   }
 }
-/*
+
 function updateResults() {
   if (accessToken !== "") {
     resultsContainer.innerHTML = "";
@@ -86,4 +82,3 @@ function getTrackHTML(id) {
       allow="encrypted-media">
     </iframe>`
 }
-*/

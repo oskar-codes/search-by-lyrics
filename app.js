@@ -1,8 +1,6 @@
 var resultsContainer = document.querySelector("#results");
 var accessToken = "";
 
-document.getElementById("spotify-connect").href = `https://accounts.spotify.com/authorize?client_id=48419cdfb01a4a71a3069d533ea0426d&redirect_uri=${encodeURIComponent("https://oskar-codes.github.io/search-by-lyrics")}&scope=user-read-private%20user-read-email&response_type=token`;
-
 window.onload = function() {
   
   if (/#access_token=.+/.test(window.location.href)) {

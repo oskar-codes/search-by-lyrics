@@ -5,6 +5,7 @@ window.onload = function() {
   var search = document.querySelector("input");
   search.setAttribute("placeholder","Enter some lyrics");
   search.style.background = "";
+  search.style.textIndent = "";
   
   if (/#access_token\=.+/.test(location.href)) {
     document.getElementById("connect-container").style.display = "none";

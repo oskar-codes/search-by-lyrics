@@ -2,6 +2,7 @@ var resultsContainer = document.querySelector("#results");
 var accessToken = "";
 var testingValue = "this is a test";
 
+alert("test")
 window.onload = function() {
   alert("loading...");
   if (/#access_token=.+/.test(location.href)) {

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: spotify;
+  src: url(https://github.com/mediasilo/microsite/blob/master/public/fonts/lineto-circular-black.ttf?raw=true);
+}
+
 body {
   margin: 0;
 }
@@ -34,8 +39,10 @@ body {
   border: none;
   background-color: #1db954;
   font-size: 20px;
+  font-family: spotify;
   padding: 11px 32px 9px;
   min-width: 160px;
   text-transform: uppercase;
   box-sizing: border-box;
+  letter-spacing: 2px;
 }

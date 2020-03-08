@@ -9,7 +9,7 @@ window.onload = function() {
   
   if (/#access_token=.+/.test(window.location.href)) {
     document.getElementById("spotify-connect").style.display = "none";
-    accessToken = window.location.href.match(/(?<=access_token).+?(?=&)/)[0];
+    accessToken = window.location.href.match(/(?<=\=access_token).+?(?=&)/)[0];
   }
   
   document.querySelector(".gsc-search-button .gsc-search-button-v2").onclick = function() {
@@ -53,7 +53,7 @@ function updateResults() {
       xhr.open('GET', `https://api.spotify.com/v1/search?q=${encodeURIComponent(text)}&type=track`, true);
       xhr.setRequestHeader('Accept', 'application/json');
       xhr.setRequestHeader('Content-Type', 'application/json');
-      xhr.setRequestHeader('Authorization', 'Bearer BQDGyChjIS61DmHLUDYFdwmrzplBgLX8xNtwPLC6WYjGI6l5MweM8-u9QfPvDiZWgBWgOB5iazWvVg2r4wo5vn_kGvzsPb2kqTkKoaE1HYgUWIPEfP1QuKJQPeECS0USoB4lYHZabFiQCH1-OmOQaODsr_gE0JPZ3A');
+      xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
       xhr.send();
 
       xhr.onload = function(e) {

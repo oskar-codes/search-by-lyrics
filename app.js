@@ -7,6 +7,15 @@ window.onload = function() {
       updateResults();
     },3000)
   }
+  
+  document.getElementById("gsc-i-id1").onkeyup = function(e) {
+    if (e.key === "Enter") {
+      resultsContainer.innerHTML = "Loading...";
+      window.setTimeout(function(){
+        updateResults();
+      },3000)
+    }
+  }
 }
 
 function updateResults() {
@@ -59,13 +68,4 @@ function getTrackHTML(id) {
       allowtransparency="true"
       allow="encrypted-media">
     </iframe>`
-}
-
-document.getElementById("gsc-i-id1").onkeyup = function(e) {
-  if (e.key === "Enter") {
-    resultsContainer.innerHTML = "Loading...";
-    window.setTimeout(function(){
-      updateResults();
-    },3000)
-  }
 }

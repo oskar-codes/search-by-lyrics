@@ -2,6 +2,10 @@ var resultsContainer = document.querySelector("#results");
 var accessToken = "";
 
 window.onload = function() {
+  var search = document.querySelector("input");
+  search.setAttribute("placeholder","Enter some lyrics");
+  search.style.background = "";
+  
   if (/#access_token\=.+/.test(location.href)) {
     document.getElementById("connect-container").style.display = "none";
     accessToken = location.href.toString().match(/(?:\#access_token\=).+?(?=\&)/)[0].replace("#access_token=","");

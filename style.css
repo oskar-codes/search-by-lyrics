@@ -45,3 +45,11 @@ body {
   box-sizing: border-box;
   letter-spacing: 2px;
 }
+
+
+@media only screen and (orientation: landscape) {
+  iframe {
+    width: 100% !important;
+    height: auto !important;
+  }
+}

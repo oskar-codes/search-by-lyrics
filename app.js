@@ -1,3 +1,5 @@
+alert("first test");
+
 var resultsContainer = document.querySelector("#results");
 var accessToken = "";
 var testingValue = "this is a test";

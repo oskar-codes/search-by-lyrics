@@ -1,4 +1,5 @@
 var resultsContainer = document.querySelector("#results");
+var accessToken;
 
 window.onload = function() {
   document.querySelector(".gsc-search-button .gsc-search-button-v2").onclick = function() {

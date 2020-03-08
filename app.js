@@ -8,7 +8,7 @@ document.getElementById("spotify-connect").onclick = function() {
 window.onload = function() {
   
   if (/#access_token=.+/.test(window.location.href)) {
-    document.getElementById("spotify-connect").style.display = "none";
+    document.getElementById("connect-container").style.display = "none";
     accessToken = window.location.href.match(/(?<=\=access_token).+?(?=&)/)[0];
   }
   

@@ -1,11 +1,11 @@
 alert("first test");
 
-/*var resultsContainer = document.querySelector("#results");
+var resultsContainer = document.querySelector("#results");
 var accessToken = "";
 var testingValue = "this is a test";
 
 alert("test")
-window.onload = function() {
+/*window.onload = function() {
   alert("loading...");
   if (/#access_token=.+/.test(location.href)) {
     alert("logged in");

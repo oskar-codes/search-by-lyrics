@@ -7,12 +7,14 @@ var testingValue = "this is a test";
 alert("test")
 window.onload = function() {
   alert("loading...");
+  try {
   if (/#access_token=.+/.test(location.href)) {
     alert("logged in");
     document.getElementById("connect-container").style.display = "none";
     accessToken = location.href.match(/(?<=access_token\=).+?(?=&)/)[0];
     alert(accessToken);
   }
+  } catch (e) { alert(e) }
 }/*
   document.querySelector(".gsc-search-button .gsc-search-button-v2").onclick = function() {
     resultsContainer.innerHTML = "Loading...";

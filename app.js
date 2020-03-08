@@ -6,8 +6,8 @@ var testingValue = "this is a test";
 
 alert("test")
 window.onload = function() {
-  alert("loading...");
-  if (/#access_token=.+/.test(location.href)) {
+  alert("loading..."); }
+  /*if (/#access_token=.+/.test(location.href)) {
     alert("logged in");
     document.getElementById("connect-container").style.display = "none";
     accessToken = location.href.match(/(?<=access_token\=).+?(?=&)/)[0];

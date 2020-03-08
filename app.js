@@ -2,7 +2,7 @@ var resultsContainer = document.querySelector("#results");
 var accessToken = "";
 
 document.getElementById("spotify-connect").onclick = function() {
-  window.open(`https://accounts.spotify.com/authorize?client_id=5fe01282e94241328a84e7c5cc169164&redirect_uri=${encodeURIComponent("https://oskar-codes.github.io/search-by-lyrics")}&scope=user-read-private%20user-read-email&response_type=token`)
+  window.open(`https://accounts.spotify.com/authorize?client_id=48419cdfb01a4a71a3069d533ea0426d&redirect_uri=${encodeURIComponent("https://oskar-codes.github.io/search-by-lyrics")}&scope=user-read-private%20user-read-email&response_type=token`)
 }
 
 window.onload = function() {

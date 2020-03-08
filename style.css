@@ -24,9 +24,15 @@ body {
   background-color: white;
 }
 
+#connect-container h3 {
+  font-size: 40px;
+}
+
 #spotify-connect {
   color: white;
   border-radius: 10px;
   border: none;
   background-color: #1db954;
+  font-size: 32px;
+  padding: 20px;
 }

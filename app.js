@@ -41,7 +41,7 @@ function updateResults() {
     xhr.open('GET', `https://api.spotify.com/v1/search?q=${encodeURIComponent(text)}&type=track`, true);
     xhr.setRequestHeader('Accept', 'application/json');
     xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.setRequestHeader('Authorization', 'Bearer BQBXZzuTrJ3njo9hGd_YXr0meq1aGYB0bBdpztfRAX3V-nvtwtW2Mw8HAc_LdYQmcza9wLt4gosSgZoYnKc2P6skyZ9P5trUbrLqxzKQORFhdNVLht1e8yNym2-hbk5aFMBqBuIyYuK8WxdvOfW4pSpstmwS8-DIkA');
+    xhr.setRequestHeader('Authorization', 'Bearer BQB4_rKydERaPoSdrCkLuIhx7J6WyKJYTokGBvex-7TlJLYcvLJSxIm1u-GODQcnBKQLPBgHMxxPQkUwEPzCfM7OICxe1rXDkpZPg1H6MosrFdZ4rP6F8ZmCWRPbqonKflC5ArWQ3aw-mUPJ-705b-GM098vwNUpww');
     xhr.send();
 
     xhr.onload = function(e) {

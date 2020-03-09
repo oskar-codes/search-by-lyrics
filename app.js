@@ -77,7 +77,7 @@ function updateResults() {
           a.click();
         }
       }
-    } else if (!spotify) {
+    } else if (!spotify && allGood) {
       resultsContainer.innerHTML = `<u><b>${text}</b></u>`;
     }
   }

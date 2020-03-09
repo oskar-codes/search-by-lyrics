@@ -60,7 +60,7 @@ function updateResults() {
             resultsContainer.innerHTML = getTrackHTML(response.tracks.items[0].uri);
           } catch (e) {
             console.log(e);
-            resultsContainer.innerHTML = `Your song seems to be <b>${text}</b>, but we couldn't find it on Spotify :(`;
+            resultsContainer.innerHTML = `Your song seems to be <u><b>${text}</b></u>, but we couldn't find it on Spotify :(`;
           }
         } else if (xhr.status == 401) {
           alert("Your Spotify session has timed out. Please log in again.");

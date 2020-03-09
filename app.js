@@ -28,11 +28,7 @@ window.onload = function() {
 function updateResults() {
   if (accessToken !== "") {
     resultsContainer.innerHTML = "";
-
-    var results = document.querySelector(".gsc-expansionArea").children;
-
-
-    var r = results[0];
+    var r = document.querySelector(".gsc-expansionArea").children[0];
 
     var text = "";
     var allGood = true;
@@ -42,6 +38,11 @@ function updateResults() {
       console.log(e);
       resultsContainer.innerHTML = "We couldn't find your song :(";
       allGood = false;
+    }
+    
+    if (text.includes("Songs, and Albums")) {
+      allGood = false;
+      resultsContainer.innerHTML = "We couldn't find your song :(";
     }
 
     if (allGood) {

@@ -34,7 +34,7 @@ body {
   margin-top: 60px;
 }
 
-#spotify-connect {
+.spotify-btn {
   color: white;
   border-radius: 500px;
   border: none;

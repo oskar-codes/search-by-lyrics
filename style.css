@@ -56,6 +56,10 @@ body {
   }
 }
 
+iframe {
+  background-color: #eee;
+}
+
 input {
   background: none !important;
   text-indent: 0 !important;

@@ -26,6 +26,10 @@ window.onload = function() {
   }
 }
 
+function connectSpotify() {
+  window.open("https://accounts.spotify.com/authorize?client_id=48419cdfb01a4a71a3069d533ea0426d&redirect_uri=https%3A%2F%2Foskar-codes.github.io%2Fsearch-by-lyrics&scope=user-read-private%20user-read-email&response_type=token&show_dialog=true","_blank");
+}
+
 function continueWithoutSpotify() {
   document.getElementById("connect-container").style.display = "none";
   spotify = false;

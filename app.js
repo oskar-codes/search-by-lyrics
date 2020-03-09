@@ -32,7 +32,7 @@ function continueWithoutSpotify() {
 }
 
 function updateResults() {
-  if (accessToken !== "") {
+  if (accessToken !== "" || !spotify) {
     resultsContainer.innerHTML = "";
     var r = document.querySelector(".gsc-expansionArea").children[0];
 

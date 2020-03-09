@@ -43,6 +43,7 @@ body {
   box-sizing: border-box;
   letter-spacing: 2px;
   text-decoration: none;
+  margin: 5px;
 }
 
 .btn-primary {

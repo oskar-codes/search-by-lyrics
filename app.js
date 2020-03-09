@@ -1,5 +1,6 @@
 var resultsContainer = document.querySelector("#results");
 var accessToken = "";
+var spotify = true;
 
 window.onload = function() {
   document.querySelector("input").setAttribute("placeholder", "Enter some lyrics");
@@ -25,6 +26,11 @@ window.onload = function() {
   }
 }
 
+function continueWithoutSpotify() {
+  document.getElementById("connect-container").style.display = "none";
+  spotify = false;
+}
+
 function updateResults() {
   if (accessToken !== "") {
     resultsContainer.innerHTML = "";
@@ -33,7 +39,7 @@ function updateResults() {
     var text = "";
     var allGood = true;
     try {
-      text = r.children[0].children[0].children[0].children[0].innerHTML.replace(/\|.+/,"").replace(/lyrics/ig, "").replace(/<\/?b>/g,"").trim();
+      text = r.children[0].children[0].children[0].children[0].innerHTML.replace(/genius/ig, "").replace(/\(?lyrics\)?/ig, "").replace(/\|/g, "").replace(/<\/?b>/g,"").trim();
     } catch (e) {
       console.log(e);
       resultsContainer.innerHTML = "We couldn't find your song :(";
@@ -45,7 +51,7 @@ function updateResults() {
       resultsContainer.innerHTML = "Your query seems to be a musician. Please search for lyrics only.";
     }
 
-    if (allGood) {
+    if (allGood && spotify) {
       var xhr = new XMLHttpRequest();
       xhr.open('GET', `https://api.spotify.com/v1/search?q=${encodeURIComponent(text)}&type=track`, true);
       xhr.setRequestHeader('Accept', 'application/json');
@@ -71,6 +77,8 @@ function updateResults() {
           a.click();
         }
       }
+    } else if (!spotify) {
+      resultsContainer.innerHTML = `<u><b>${text}</b></u>`;
     }
   }
 }

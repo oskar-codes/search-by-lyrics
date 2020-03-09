@@ -37,7 +37,7 @@ function updateResults() {
     var text = "";
     var allGood = true;
     try {
-      text = r.children[0].children[0].children[0].children[0].innerHTML.replace(/\|.+/,"").replace(/lyrics/ig, "").replace(/<b>/g,"").replace(/<\/b>/g,"").trim();
+      text = r.children[0].children[0].children[0].children[0].innerHTML.replace(/\|.+/,"").replace(/lyrics/ig, "").replace(/<\/?b>/g,"").trim();
     } catch (e) {
       console.log(e);
       resultsContainer.innerHTML = "We couldn't find your song :(";

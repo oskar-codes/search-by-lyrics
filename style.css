@@ -62,6 +62,13 @@ body {
     width: 95% !important;
     height: 400px !important;
   }
+  p {
+    width: 95%;
+  }
+}
+
+p {
+  width: 75%;
 }
 
 iframe {

@@ -63,9 +63,9 @@ body {
     height: 400px !important;
   }
   p {
-    margin: 7px 0px;
+    margin: 7px 5px !important;
   }
-  btn {
+  .btn {
     width: 90%;
     margin-bottom: 30px;
   }

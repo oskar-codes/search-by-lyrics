@@ -42,7 +42,7 @@ function updateResults() {
     
     if (text.includes("Songs, and Albums")) {
       allGood = false;
-      resultsContainer.innerHTML = "We couldn't find your song :(";
+      resultsContainer.innerHTML = "Your query seems to be a musician. Please search for lyrics only.";
     }
 
     if (allGood) {

@@ -47,6 +47,10 @@ body {
   cursor: pointer;
 }
 
+.btn:focus {
+  outline: none;
+}
+
 .btn-primary {
   border: 3px solid #1db954;
   background-color: #1db954;

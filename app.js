@@ -43,7 +43,7 @@ function updateResults() {
     var text = "";
     var allGood = true;
     try {
-      text = r.children[0].children[0].children[0].children[0].innerHTML.replace(/genius/ig, "").replace(/\(?lyrics\)?/ig, "").replace(/\|/g, "").replace(/<\/?b>/g,"").trim();
+      text = r.children[0].children[0].children[0].children[0].innerHTML.replace(/genius/ig, "").replace(/\(?lyrics\)?/ig, "").replace(/\.{3}/g, "").replace(/\|/g, "").replace(/<\/?b>/g,"").trim();
     } catch (e) {
       console.log(e);
       resultsContainer.innerHTML = "We couldn't find your song :(";

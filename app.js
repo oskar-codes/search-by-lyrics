@@ -72,7 +72,7 @@ function updateResults() {
             console.log(e);
             resultsContainer.innerHTML = `Your song seems to be <u><b>${text}</b></u>, but we couldn't find it on Spotify :(`;
           }
-        } else if (xhr.status == 401) {
+        } else {
           alert("Your Spotify session has timed out. Please log in again.");
           var a = document.createElement("a");
           a.href = "https://oskar-codes.github.io/search-by-lyrics/";

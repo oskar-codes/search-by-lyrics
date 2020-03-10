@@ -41,9 +41,11 @@ function updateResults() {
     var r = document.querySelector(".gsc-expansionArea").children[0];
 
     var text = "";
+    var link = "";
     var allGood = true;
     try {
       text = r.children[0].children[0].children[0].children[0].innerHTML.replace(/genius/ig, "").replace(/\(?lyrics\)?/ig, "").replace(/\.{3}/g, "").replace(/\|/g, "").replace(/<\/?b>/g,"").trim();
+      link = r.children[0].children[0].children[0].children[0].href;
     } catch (e) {
       console.log(e);
       resultsContainer.innerHTML = "We couldn't find your song :(";
@@ -70,7 +72,7 @@ function updateResults() {
             resultsContainer.innerHTML = getTrackHTML(response.tracks.items[0].uri);
           } catch (e) {
             console.log(e);
-            resultsContainer.innerHTML = `Your song seems to be <u><b>${text}</b></u>, but we couldn't find it on Spotify :(`;
+            resultsContainer.innerHTML = `Your song seems to be <a href="${link}"><u><b>${text}</b></u></a>, but we couldn't find it on Spotify :(`;
           }
         } else {
           alert("Your Spotify session has timed out. Please log in again.");
@@ -82,7 +84,7 @@ function updateResults() {
         }
       }
     } else if (!spotify && allGood) {
-      resultsContainer.innerHTML = `<u><b>${text}</b></u>`;
+      resultsContainer.innerHTML = `<a href="${link}"><u><b>${text}</b></u></a>`;
     }
   }
 }

@@ -72,7 +72,7 @@ function updateResults() {
             resultsContainer.innerHTML = getTrackHTML(response.tracks.items[0].uri);
           } catch (e) {
             console.log(e);
-            resultsContainer.innerHTML = `Your song seems to be <a href="${link}"><u><b>${text}</b></u></a>, but we couldn't find it on Spotify :(`;
+            resultsContainer.innerHTML = `Your song seems to be <a target="_blank" href="${link}"><u><b>${text}</b></u></a>, but we couldn't find it on Spotify :(`;
           }
         } else {
           alert("Your Spotify session has timed out. Please log in again.");
@@ -84,7 +84,7 @@ function updateResults() {
         }
       }
     } else if (!spotify && allGood) {
-      resultsContainer.innerHTML = `<a href="${link}"><u><b>${text}</b></u></a>`;
+      resultsContainer.innerHTML = `<a target="_blank" href="${link}"><u><b>${text}</b></u></a>`;
     }
   }
 }

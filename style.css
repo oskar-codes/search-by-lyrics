@@ -63,6 +63,13 @@ body {
   color: black;
 }
 
+@media only screen and (orientation: landscape) {
+  #search-container {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
 @media only screen and (orientation: portrait) {
   iframe {
     width: 95% !important;

@@ -97,7 +97,7 @@ function getTrackHTML(id) {
     <iframe 
       src="https://open.spotify.com/embed/track/${id.replace('spotify:track:','')}" 
       width="500" 
-      height="600"
+      height="580"
       frameborder="0"
       allowtransparency="true"
       allow="encrypted-media">

@@ -1,4 +1,5 @@
 var resultsContainer = document.querySelector("#results");
+var inputField = document.getElementById("gsc-i-id1");
 var accessToken = "";
 var spotify = true;
 
@@ -10,14 +11,16 @@ window.onload = function() {
     accessToken = location.href.toString().match(/(?:\#access_token\=).+?(?=\&)/)[0].replace("#access_token=", "");
   }
   document.querySelector(".gsc-search-button .gsc-search-button-v2").onclick = function() {
-    resultsContainer.innerHTML = "Loading...";
-    window.setTimeout(function(){
-      updateResults();
-    },3000)
+    if (inputField.value !== "" && inputField.value.trim()) {
+      resultsContainer.innerHTML = "Loading...";
+      window.setTimeout(function(){
+        updateResults();
+      },3000)
+    }
   }
   
-  document.getElementById("gsc-i-id1").onkeyup = function(e) {
-    if (e.key === "Enter") {
+  inputField.onkeyup = function(e) {
+    if (e.key === "Enter" && inputField.value !== "" && inputField.value.trim()) {
       resultsContainer.innerHTML = "Loading...";
       window.setTimeout(function(){
         updateResults();

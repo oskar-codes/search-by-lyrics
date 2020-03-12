@@ -11,13 +11,14 @@ window.onload = function() {
     accessToken = location.href.toString().match(/(?:\#access_token\=).+?(?=\&)/)[0].replace("#access_token=", "");
   }
   document.querySelector(".gsc-search-button .gsc-search-button-v2").onclick = function() {
-    alert(inputField.value + " / " + !!inputField.value.trim())
+    try {
     if (inputField.value !== "" && !!inputField.value.trim()) {
       resultsContainer.innerHTML = "Loading...";
       window.setTimeout(function(){
         updateResults();
       },3000)
     }
+    } catch(e) {alert(e)}
   }
   
   inputField.onkeyup = function(e) {

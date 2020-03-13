@@ -32,6 +32,7 @@ body {
 #connect-container h1 {
   font-size: 40px;
   margin-top: 60px;
+  text-transform: uppercase;
 }
 
 .btn {
